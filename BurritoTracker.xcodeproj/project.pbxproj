@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEDBD7792C4C58C5000B6155 /* BurritoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7782C4C58C5000B6155 /* BurritoTrackerApp.swift */; };
+		BEDBD77B2C4C58C5000B6155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD77A2C4C58C5000B6155 /* ContentView.swift */; };
+		BEDBD77D2C4C58C6000B6155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDBD77C2C4C58C6000B6155 /* Assets.xcassets */; };
+		BEDBD7802C4C58C6000B6155 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDBD77F2C4C58C6000B6155 /* Preview Assets.xcassets */; };
+		BEDBD78A2C4C58C6000B6155 /* BurritoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7892C4C58C6000B6155 /* BurritoTrackerTests.swift */; };
+		BEDBD7942C4C58C6000B6155 /* BurritoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7932C4C58C6000B6155 /* BurritoTrackerUITests.swift */; };
+		BEDBD7962C4C58C6000B6155 /* BurritoTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7952C4C58C6000B6155 /* BurritoTrackerUITestsLaunchTests.swift */; };
+		BEDBD7A32C4C58D1000B6155 /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7A22C4C58D1000B6155 /* Bet.swift */; };
+		BEDBD7A52C4C597D000B6155 /* Bettor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7A42C4C597D000B6155 /* Bettor.swift */; };
+		BEDBD7A72C4C5A78000B6155 /* BetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7A62C4C5A78000B6155 /* BetListView.swift */; };
+		BEDBD7AB2C4C5F9E000B6155 /* AddBettorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7AA2C4C5F9E000B6155 /* AddBettorView.swift */; };
+		BEDBD7AF2C4C62B7000B6155 /* AddBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7AE2C4C62B7000B6155 /* AddBetView.swift */; };
+		BEDBD7B12C4C639B000B6155 /* BetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B02C4C639B000B6155 /* BetDetailView.swift */; };
+		BEDBD7B32C4C6588000B6155 /* BettorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */; };
+		BEDBD7B52C4C6DE1000B6155 /* BettorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */; };
+		BEDBD7B72C4C740A000B6155 /* BurritoBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B62C4C740A000B6155 /* BurritoBarChartView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEDBD7862C4C58C6000B6155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEDBD76D2C4C58C5000B6155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEDBD7742C4C58C5000B6155;
+			remoteInfo = BurritoTracker;
+		};
+		BEDBD7902C4C58C6000B6155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEDBD76D2C4C58C5000B6155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEDBD7742C4C58C5000B6155;
+			remoteInfo = BurritoTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEDBD7752C4C58C5000B6155 /* BurritoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurritoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDBD7782C4C58C5000B6155 /* BurritoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoTrackerApp.swift; sourceTree = "<group>"; };
+		BEDBD77A2C4C58C5000B6155 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BEDBD77C2C4C58C6000B6155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEDBD77F2C4C58C6000B6155 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEDBD7852C4C58C6000B6155 /* BurritoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurritoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDBD7892C4C58C6000B6155 /* BurritoTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoTrackerTests.swift; sourceTree = "<group>"; };
+		BEDBD78F2C4C58C6000B6155 /* BurritoTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurritoTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDBD7932C4C58C6000B6155 /* BurritoTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoTrackerUITests.swift; sourceTree = "<group>"; };
+		BEDBD7952C4C58C6000B6155 /* BurritoTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEDBD7A22C4C58D1000B6155 /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
+		BEDBD7A42C4C597D000B6155 /* Bettor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bettor.swift; sourceTree = "<group>"; };
+		BEDBD7A62C4C5A78000B6155 /* BetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetListView.swift; sourceTree = "<group>"; };
+		BEDBD7AA2C4C5F9E000B6155 /* AddBettorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBettorView.swift; sourceTree = "<group>"; };
+		BEDBD7AE2C4C62B7000B6155 /* AddBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBetView.swift; sourceTree = "<group>"; };
+		BEDBD7B02C4C639B000B6155 /* BetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetDetailView.swift; sourceTree = "<group>"; };
+		BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettorDetailView.swift; sourceTree = "<group>"; };
+		BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettorListView.swift; sourceTree = "<group>"; };
+		BEDBD7B62C4C740A000B6155 /* BurritoBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoBarChartView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEDBD7722C4C58C5000B6155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD7822C4C58C6000B6155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD78C2C4C58C6000B6155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEDBD76C2C4C58C5000B6155 = {
+			isa = PBXGroup;
+			children = (
+				BEDBD7772C4C58C5000B6155 /* BurritoTracker */,
+				BEDBD7882C4C58C6000B6155 /* BurritoTrackerTests */,
+				BEDBD7922C4C58C6000B6155 /* BurritoTrackerUITests */,
+				BEDBD7762C4C58C5000B6155 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEDBD7762C4C58C5000B6155 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBD7752C4C58C5000B6155 /* BurritoTracker.app */,
+				BEDBD7852C4C58C6000B6155 /* BurritoTrackerTests.xctest */,
+				BEDBD78F2C4C58C6000B6155 /* BurritoTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEDBD7772C4C58C5000B6155 /* BurritoTracker */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBD7782C4C58C5000B6155 /* BurritoTrackerApp.swift */,
+				BEDBD77A2C4C58C5000B6155 /* ContentView.swift */,
+				BEDBD7A62C4C5A78000B6155 /* BetListView.swift */,
+				BEDBD7B02C4C639B000B6155 /* BetDetailView.swift */,
+				BEDBD7AE2C4C62B7000B6155 /* AddBetView.swift */,
+				BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */,
+				BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */,
+				BEDBD7B62C4C740A000B6155 /* BurritoBarChartView.swift */,
+				BEDBD7AA2C4C5F9E000B6155 /* AddBettorView.swift */,
+				BEDBD7A22C4C58D1000B6155 /* Bet.swift */,
+				BEDBD7A42C4C597D000B6155 /* Bettor.swift */,
+				BEDBD77C2C4C58C6000B6155 /* Assets.xcassets */,
+				BEDBD77E2C4C58C6000B6155 /* Preview Content */,
+			);
+			path = BurritoTracker;
+			sourceTree = "<group>";
+		};
+		BEDBD77E2C4C58C6000B6155 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBD77F2C4C58C6000B6155 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BEDBD7882C4C58C6000B6155 /* BurritoTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBD7892C4C58C6000B6155 /* BurritoTrackerTests.swift */,
+			);
+			path = BurritoTrackerTests;
+			sourceTree = "<group>";
+		};
+		BEDBD7922C4C58C6000B6155 /* BurritoTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBD7932C4C58C6000B6155 /* BurritoTrackerUITests.swift */,
+				BEDBD7952C4C58C6000B6155 /* BurritoTrackerUITestsLaunchTests.swift */,
+			);
+			path = BurritoTrackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEDBD7742C4C58C5000B6155 /* BurritoTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDBD7992C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTracker" */;
+			buildPhases = (
+				BEDBD7712C4C58C5000B6155 /* Sources */,
+				BEDBD7722C4C58C5000B6155 /* Frameworks */,
+				BEDBD7732C4C58C5000B6155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BurritoTracker;
+			productName = BurritoTracker;
+			productReference = BEDBD7752C4C58C5000B6155 /* BurritoTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEDBD7842C4C58C6000B6155 /* BurritoTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDBD79C2C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTrackerTests" */;
+			buildPhases = (
+				BEDBD7812C4C58C6000B6155 /* Sources */,
+				BEDBD7822C4C58C6000B6155 /* Frameworks */,
+				BEDBD7832C4C58C6000B6155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEDBD7872C4C58C6000B6155 /* PBXTargetDependency */,
+			);
+			name = BurritoTrackerTests;
+			productName = BurritoTrackerTests;
+			productReference = BEDBD7852C4C58C6000B6155 /* BurritoTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEDBD78E2C4C58C6000B6155 /* BurritoTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDBD79F2C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTrackerUITests" */;
+			buildPhases = (
+				BEDBD78B2C4C58C6000B6155 /* Sources */,
+				BEDBD78C2C4C58C6000B6155 /* Frameworks */,
+				BEDBD78D2C4C58C6000B6155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEDBD7912C4C58C6000B6155 /* PBXTargetDependency */,
+			);
+			name = BurritoTrackerUITests;
+			productName = BurritoTrackerUITests;
+			productReference = BEDBD78F2C4C58C6000B6155 /* BurritoTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEDBD76D2C4C58C5000B6155 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					BEDBD7742C4C58C5000B6155 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					BEDBD7842C4C58C6000B6155 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = BEDBD7742C4C58C5000B6155;
+					};
+					BEDBD78E2C4C58C6000B6155 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = BEDBD7742C4C58C5000B6155;
+					};
+				};
+			};
+			buildConfigurationList = BEDBD7702C4C58C5000B6155 /* Build configuration list for PBXProject "BurritoTracker" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEDBD76C2C4C58C5000B6155;
+			productRefGroup = BEDBD7762C4C58C5000B6155 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEDBD7742C4C58C5000B6155 /* BurritoTracker */,
+				BEDBD7842C4C58C6000B6155 /* BurritoTrackerTests */,
+				BEDBD78E2C4C58C6000B6155 /* BurritoTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEDBD7732C4C58C5000B6155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDBD7802C4C58C6000B6155 /* Preview Assets.xcassets in Resources */,
+				BEDBD77D2C4C58C6000B6155 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD7832C4C58C6000B6155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD78D2C4C58C6000B6155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEDBD7712C4C58C5000B6155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDBD77B2C4C58C5000B6155 /* ContentView.swift in Sources */,
+				BEDBD7A32C4C58D1000B6155 /* Bet.swift in Sources */,
+				BEDBD7792C4C58C5000B6155 /* BurritoTrackerApp.swift in Sources */,
+				BEDBD7B72C4C740A000B6155 /* BurritoBarChartView.swift in Sources */,
+				BEDBD7AF2C4C62B7000B6155 /* AddBetView.swift in Sources */,
+				BEDBD7A52C4C597D000B6155 /* Bettor.swift in Sources */,
+				BEDBD7B32C4C6588000B6155 /* BettorDetailView.swift in Sources */,
+				BEDBD7B52C4C6DE1000B6155 /* BettorListView.swift in Sources */,
+				BEDBD7AB2C4C5F9E000B6155 /* AddBettorView.swift in Sources */,
+				BEDBD7A72C4C5A78000B6155 /* BetListView.swift in Sources */,
+				BEDBD7B12C4C639B000B6155 /* BetDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD7812C4C58C6000B6155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDBD78A2C4C58C6000B6155 /* BurritoTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDBD78B2C4C58C6000B6155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDBD7942C4C58C6000B6155 /* BurritoTrackerUITests.swift in Sources */,
+				BEDBD7962C4C58C6000B6155 /* BurritoTrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEDBD7872C4C58C6000B6155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEDBD7742C4C58C5000B6155 /* BurritoTracker */;
+			targetProxy = BEDBD7862C4C58C6000B6155 /* PBXContainerItemProxy */;
+		};
+		BEDBD7912C4C58C6000B6155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEDBD7742C4C58C5000B6155 /* BurritoTracker */;
+			targetProxy = BEDBD7902C4C58C6000B6155 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BEDBD7972C4C58C6000B6155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEDBD7982C4C58C6000B6155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEDBD79A2C4C58C6000B6155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BurritoTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DYJ8JD6Y6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEDBD79B2C4C58C6000B6155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BurritoTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DYJ8JD6Y6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEDBD79D2C4C58C6000B6155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BurritoTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BurritoTracker";
+			};
+			name = Debug;
+		};
+		BEDBD79E2C4C58C6000B6155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BurritoTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BurritoTracker";
+			};
+			name = Release;
+		};
+		BEDBD7A02C4C58C6000B6155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BurritoTracker;
+			};
+			name = Debug;
+		};
+		BEDBD7A12C4C58C6000B6155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mginelli.BurritoTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BurritoTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEDBD7702C4C58C5000B6155 /* Build configuration list for PBXProject "BurritoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDBD7972C4C58C6000B6155 /* Debug */,
+				BEDBD7982C4C58C6000B6155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDBD7992C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDBD79A2C4C58C6000B6155 /* Debug */,
+				BEDBD79B2C4C58C6000B6155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDBD79C2C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDBD79D2C4C58C6000B6155 /* Debug */,
+				BEDBD79E2C4C58C6000B6155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDBD79F2C4C58C6000B6155 /* Build configuration list for PBXNativeTarget "BurritoTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDBD7A02C4C58C6000B6155 /* Debug */,
+				BEDBD7A12C4C58C6000B6155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEDBD76D2C4C58C5000B6155 /* Project object */;
+}
