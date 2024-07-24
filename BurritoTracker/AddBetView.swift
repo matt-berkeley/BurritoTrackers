@@ -65,24 +65,9 @@ struct AddBetView: View {
         
         modelContext.insert(bet)
         
-        // Debugging: Print current state before appending the bet
-        print("Before appending:")
-        print("Bettor 1 bets: \(bettor1.bets.map { $0.betDescription })")
-        print("Bettor 2 bets: \(bettor2.bets.map { $0.betDescription })")
-//        
-//        modelContext.insert(bettor1)
-//        modelContext.insert(bettor2)
-        
-        
         // Append bet to bettors
         bettor1.bets.append(bet)
         bettor2.bets.append(bet)
-        
-  
-        // Debugging: Print current state after appending the bet
-        print("After appending:")
-        print("Bettor 1 bets: \(bettor1.bets.map { $0.betDescription })")
-        print("Bettor 2 bets: \(bettor2.bets.map { $0.betDescription })")
         
         do {
             try modelContext.save()

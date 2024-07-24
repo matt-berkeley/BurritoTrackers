@@ -1,74 +1,104 @@
-//
-//  BetListView.swift
-//  BurritoTracker
-//
-//  Created by Matt Ginelli on 7/20/24.
-//
-
 import SwiftUI
 import SwiftData
 
+enum BetFilter: String, CaseIterable, Identifiable {
+    case all = "All"
+    case active = "Undecided"
+    case unpaid = "Unpaid"
+    
+    var id: String { self.rawValue }
+}
+
 struct BetListView: View {
     @Environment(\.modelContext) var modelContext
-    @Query(sort: \Bet.date) private var bets: [Bet]
+    @Query(sort: \Bet.date, order: .reverse) private var bets: [Bet]
     
     @State private var searchText: String = ""
+    @State private var selectedFilter: BetFilter = .all
     
-    // Filtered bets based on search text
+    // Filtered bets based on search text and selected filter
     private var filteredBets: [Bet] {
         let searchTextLowercased = searchText.lowercased()
-        
-        if searchText.isEmpty {
-            return bets
-        } else {
-            return bets.filter { bet in
-                // Check if the bet description contains the search text
-                let descriptionMatch = bet.betDescription.lowercased().contains(searchTextLowercased)
-                
-                // Check if any bettor's name contains the search text
-                let bettorMatch = bet.bettors.contains { bettor in
-                    bettor.name.lowercased().contains(searchTextLowercased)
-                }
-                
-                return descriptionMatch || bettorMatch
+        let filteredBySearchText = searchText.isEmpty ? bets : bets.filter { bet in
+            let descriptionMatch = bet.betDescription.lowercased().contains(searchTextLowercased)
+            let bettorMatch = bet.bettors.contains { bettor in
+                bettor.name.lowercased().contains(searchTextLowercased)
             }
+            return descriptionMatch || bettorMatch
+        }
+        
+        switch selectedFilter {
+        case .all:
+            return filteredBySearchText
+        case .active:
+            return filteredBySearchText.filter { $0.winner == nil }
+        case .unpaid:
+            return filteredBySearchText.filter { $0.winner != nil && !$0.isPaidOut }
         }
     }
     
     var body: some View {
         NavigationStack {
-            List(filteredBets) { bet in
-                NavigationLink(destination: BetDetailView(bet: bet)) {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            ForEach(bet.bettors) { bettor in
-                                HStack {
-                                    
-                                    Text(bettor.name)
-                                        .font(.headline)
+            VStack {
+                Picker("Filter", selection: $selectedFilter) {
+                    ForEach(BetFilter.allCases) { filter in
+                        Text(filter.rawValue).tag(filter)
+                    }
+                }
+                .padding([.horizontal, .top])
+                .pickerStyle(SegmentedPickerStyle())
+                List(filteredBets) { bet in
+                    NavigationLink(destination: BetDetailView(bet: bet)) {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                ForEach(bet.bettors) { bettor in
+                                    HStack {
+                                        Text(bettor.name)
+                                            .font(.headline)
+                                    }
+                                    if bettor != bet.bettors.last {
+                                        Text("vs.")
+                                    }
                                 }
-                                if bettor != bet.bettors.last {
-                                    Text("vs.")
-                                }
-                                
+                                Spacer()
+                                Text(bet.date.formatted(date: .numeric, time: .omitted))
                             }
-                            Spacer()
-                            Text(bet.date.formatted(date: .numeric, time: .omitted))
-
+                            Text(bet.betDescription)
+                                .font(.headline)
+                            
+                            Text("^[\(bet.wagerAmount) burrito](inflection: true)")
+                            
+                            HStack {
+                                if bet.isPaidOut {
+                                    Text("Paid")
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                } else if bet.winner == nil {
+                                    Text("Undecided Winner")
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                } else if !bet.isPaidOut {
+                                    Text("Unpaid")
+                                        .font(.caption)
+                                        .foregroundStyle(.red)
+                                }
+                                Spacer()
+                                if let winner = bet.winner {
+                                    Text("Winner: \(winner.name)")
+                                        .foregroundStyle(.blue)
+                                        .fontWeight(.bold)
+                                }
+                            }
                         }
-                        Text(bet.betDescription)
-                            .font(.headline)
-                        
-                        Text("^[\(bet.wagerAmount) burrito](inflection: true)")
+                    }
+                    .swipeActions {
+                        Button("Delete", systemImage: "trash", role: .destructive) {
+                            modelContext.delete(bet)
+                        }
                     }
                 }
-                .swipeActions {
-                    Button("Delete", systemImage: "trash", role: .destructive) {
-                        modelContext.delete(bet)
-                    }
-                }
+                .searchable(text: $searchText, prompt: "Search by name or description")
             }
-            .searchable(text: $searchText, prompt: "Search by name or description")
             .navigationTitle("Bets")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

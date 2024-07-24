@@ -23,6 +23,7 @@
 		BEDBD7B32C4C6588000B6155 /* BettorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */; };
 		BEDBD7B52C4C6DE1000B6155 /* BettorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */; };
 		BEDBD7B72C4C740A000B6155 /* BurritoBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7B62C4C740A000B6155 /* BurritoBarChartView.swift */; };
+		BEDBD7BB2C513BA5000B6155 /* PaidStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBD7BA2C513BA5000B6155 /* PaidStampView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettorDetailView.swift; sourceTree = "<group>"; };
 		BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettorListView.swift; sourceTree = "<group>"; };
 		BEDBD7B62C4C740A000B6155 /* BurritoBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoBarChartView.swift; sourceTree = "<group>"; };
+		BEDBD7BA2C513BA5000B6155 /* PaidStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidStampView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				BEDBD77A2C4C58C5000B6155 /* ContentView.swift */,
 				BEDBD7A62C4C5A78000B6155 /* BetListView.swift */,
 				BEDBD7B02C4C639B000B6155 /* BetDetailView.swift */,
+				BEDBD7BA2C513BA5000B6155 /* PaidStampView.swift */,
 				BEDBD7AE2C4C62B7000B6155 /* AddBetView.swift */,
 				BEDBD7B42C4C6DE1000B6155 /* BettorListView.swift */,
 				BEDBD7B22C4C6588000B6155 /* BettorDetailView.swift */,
@@ -288,6 +291,7 @@
 				BEDBD7A32C4C58D1000B6155 /* Bet.swift in Sources */,
 				BEDBD7792C4C58C5000B6155 /* BurritoTrackerApp.swift in Sources */,
 				BEDBD7B72C4C740A000B6155 /* BurritoBarChartView.swift in Sources */,
+				BEDBD7BB2C513BA5000B6155 /* PaidStampView.swift in Sources */,
 				BEDBD7AF2C4C62B7000B6155 /* AddBetView.swift in Sources */,
 				BEDBD7A52C4C597D000B6155 /* Bettor.swift in Sources */,
 				BEDBD7B32C4C6588000B6155 /* BettorDetailView.swift in Sources */,

@@ -18,6 +18,7 @@ class Bet {
     var bettors: [Bettor] = []
     var winner: Bettor?
     var isPaidOut: Bool
+    var paymentDate: Date?
     var isCompleted: Bool {
         if winner != nil && isPaidOut == true {
             return true
@@ -28,13 +29,14 @@ class Bet {
     }
     var date: Date
     
-    init(id: UUID = UUID(), betDescription: String, wagerAmount: Int, bettors: [Bettor] = [], winner: Bettor? = nil, isPaidOut: Bool = false, date: Date = .now) {
+    init(id: UUID = UUID(), betDescription: String, wagerAmount: Int, bettors: [Bettor] = [], winner: Bettor? = nil, isPaidOut: Bool = false, paymentDate: Date? = nil, date: Date = .now) {
         self.id = id
         self.betDescription = betDescription
         self.wagerAmount = wagerAmount
         self.bettors = bettors
         self.winner = winner
         self.isPaidOut = isPaidOut
+        self.paymentDate = paymentDate
         self.date = date
     }
 }

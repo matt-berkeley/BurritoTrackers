@@ -13,6 +13,7 @@ struct BetDetailView: View {
     
     @State private var selectedWinner: Bettor?
     
+    
     var body: some View {
         Form {
             Section(header: Text("Bet Description")) {
@@ -21,6 +22,7 @@ struct BetDetailView: View {
             }
             
             Section(header: Text("Wager Amount")) {
+                                
                 Text("^[\(bet.wagerAmount) burrito](inflection: true)")
                     .font(.body)
             }
@@ -54,6 +56,25 @@ struct BetDetailView: View {
                     Text(bet.winner?.name ?? "No winner selected")
                 }
             }
+            
+            Section(header: Text("Payment")) {
+                if !bet.isPaidOut {
+
+                    Button("Mark Bet Paid") {
+                        payBet()
+                    }
+                    .disabled(bet.winner == nil)
+                    // can't mark it paid if the bet is still undecided.
+                } else {
+                    if let paymentDate = bet.paymentDate {
+                        Text("Paid on \(paymentDate.formatted(date: .abbreviated, time: .omitted))")
+                    } else {
+                        Text("Paid")
+                    }
+                }
+                
+            }
+            
         }
         .navigationTitle("Bet Details")
         .navigationBarTitleDisplayMode(.inline)
@@ -61,6 +82,12 @@ struct BetDetailView: View {
     
     private func setWinner(_ winner: Bettor) {
         bet.winner = winner
+        
+    }
+    
+    private func payBet() {
+        bet.isPaidOut = true
+        bet.paymentDate = .now
     }
     
 }
