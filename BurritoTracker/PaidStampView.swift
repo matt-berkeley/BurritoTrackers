@@ -10,7 +10,7 @@ import SwiftUI
 struct PaidStampView: View {
     var body: some View {
         Text("🌯 PAID")
-            .font(.system(size: 36, weight: .bold))
+            .font(.system(size: 15, weight: .bold))
             .foregroundColor(.red)
             .padding(10)
             .background(

@@ -49,44 +49,43 @@ struct BetListView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 List(filteredBets) { bet in
                     NavigationLink(destination: BetDetailView(bet: bet)) {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                ForEach(bet.bettors) { bettor in
-                                    HStack {
-                                        Text(bettor.name)
-                                            .font(.headline)
-                                    }
-                                    if bettor != bet.bettors.last {
-                                        Text("vs.")
-                                    }
-                                }
-                                Spacer()
-                                Text(bet.date.formatted(date: .numeric, time: .omitted))
+                        HStack {
+                            if bet.isPaidOut {
+                                PaidStampView()
                             }
-                            Text(bet.betDescription)
-                                .font(.headline)
-                            
-                            Text("^[\(bet.wagerAmount) burrito](inflection: true)")
-                            
-                            HStack {
-                                if bet.isPaidOut {
-                                    Text("Paid")
+                            Spacer() 
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    ForEach(bet.bettors) { bettor in
+                                        HStack {
+                                            Text(bettor.name)
+                                                .foregroundStyle(bet.winner?.id == bettor.id ? .green : .primary)
+                                                .font(.headline)
+                                        }
+                                        if bettor != bet.bettors.last {
+                                            Text("vs.")
+                                        }
+                                    }
+                                    Spacer()
+                                    Text(bet.date.formatted(date: .numeric, time: .omitted))
                                         .font(.caption)
-                                        .foregroundStyle(.gray)
-                                } else if bet.winner == nil {
-                                    Text("Undecided Winner")
-                                        .font(.caption)
-                                        .foregroundStyle(.gray)
-                                } else if !bet.isPaidOut {
-                                    Text("Unpaid")
-                                        .font(.caption)
-                                        .foregroundStyle(.red)
                                 }
-                                Spacer()
-                                if let winner = bet.winner {
-                                    Text("Winner: \(winner.name)")
-                                        .foregroundStyle(.blue)
-                                        .fontWeight(.bold)
+                                Text(bet.betDescription)
+                                    .font(.headline)
+                                
+                                Text("^[\(bet.wagerAmount) burrito](inflection: true)")
+                                
+                                HStack {
+                                    if bet.winner == nil {
+                                        Text("Undecided Winner")
+                                            .font(.caption)
+                                            .foregroundStyle(.gray)
+                                    } else if !bet.isPaidOut {
+                                        Text("Unpaid")
+                                            .font(.caption)
+                                            .foregroundStyle(.red)
+                                    }
+                                    Spacer()
                                 }
                             }
                         }

@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             
+            
             BettorListView()
                 .tabItem {
                     Label("Bettors", systemImage: "person.3.sequence.fill")
@@ -25,6 +26,11 @@ struct ContentView: View {
                 }
                 .tag(1)
             
+            LoginView()
+                .tabItem {
+                    Label("Login", systemImage: "person.badge.key")
+                }
+                .tag(3)
         }
     }
 }
