@@ -36,5 +36,5 @@ struct InputField: View {
 }
 
 #Preview {
-    InputField(text: .constant("Title"), title: "Email Address", placeholder: "name@example.com")
+    InputField(text: .constant("Title"), title: "Email Address", placeholder: "matt@example.com")
 }
